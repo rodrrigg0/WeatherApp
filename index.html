@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather app</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+
+    <div class="header__logo">
+      <img src="assets/images/logo.svg" alt="Weather Now" class="header__logo-img">
+    </div>
+
+    <div class="units-dropdown">
+      <button class="units-btn" id="unitsBtn">
+        <img src="assets/images/icon-units.svg" alt="">
+        <span>Units</span>
+        <img src="assets/images/icon-dropdown.svg" alt="" class="units-btn__arrow">
+      </button>
+
+      <div class="units-menu" id="unitsMenu" hidden>
+
+        <div class="units-menu__header">
+          <button class="units-menu__switch">Switch to Imperial</button>
+        </div>
+
+        <div class="units-menu__section">
+          <p class="units-menu__label">Temperature</p>
+          <button class="units-menu__option active">
+            Celsius (°C)
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+          <button class="units-menu__option">
+            Fahrenheit (°F)
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+        </div>
+
+        <div class="units-menu__section">
+          <p class="units-menu__label">Wind Speed</p>
+          <button class="units-menu__option active">
+            km/h
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+          <button class="units-menu__option">
+            mph
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+        </div>
+
+        <div class="units-menu__section">
+          <p class="units-menu__label">Precipitation</p>
+          <button class="units-menu__option active">
+            Millimeters (mm)
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+          <button class="units-menu__option">
+            Inches (in)
+            <img src="assets/images/icon-checkmark.svg" alt="" class="checkmark">
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+  
+  <main class="main">
+  <section class="hero">
+
+    <h1 class="hero__title">How's the sky looking today?</h1>
+
+    <div class="search-wrapper">
+      <div class="search-bar">
+        <img src="assets/images/icon-search.svg" alt="" class="search-bar__icon">
+        <input
+          type="text"
+          id="searchInput"
+          class="search-bar__input"
+          placeholder="Busca una ciudad"
+          autocomplete="off"
+        >
+      </div>
+      <button class="search-btn" id="searchBtn">Search</button>
+    </div>
+  </section>
+
+  <section class="weather-content" id="weatherContent">
+
+    <div class ="weather-left">
+      <div class="today-card">
+
+        <div class="today-card__info">
+          <h2 class="today-card__city" id="cityName">Berlin, Germany</h2>
+          <p class="today-card__date" id="currentDate">Monday, 1 Jan 2024</p>
+        </div>
+
+        <div class="today-card__weather">
+          <img src="assets/images/icon-sunny.webp" alt="sunny" class="today-card__icon">
+          <p class="today-card__temp" id="currentTemp">20°C</p>
+
+      </div>
+
+    </div>
+
+  
+
+</main>
+
+
+
+
+<script src="app.js"></script>
+</body>
+</html>

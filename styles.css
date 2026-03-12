@@ -23,6 +23,26 @@ body {
   margin: 0 auto;
   padding: 0 2rem 4rem;
 }
+/*HACER LA PAGINA RESPONSIVE*/
+
+@media (max-width: 768px) {
+  .header { padding: 1rem; }
+  .main { padding: 0 1rem 3rem; }
+  .hero { text-align: left; padding: 1.5rem 0; }
+  .search-wrapper { flex-direction: column; max-width: 100%; }
+  .search-btn { width: 100%; padding: .75rem; }
+  .weather-content { display: flex !important; flex-direction: column !important; }
+  .weather-left { order: 1; width: 100%; }
+  .weather-right { order: 2; width: 100%; }
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+  .daily-forecast__grid { grid-template-columns: repeat(3, 1fr); }
+  .hourly-list { max-height: none; }
+}
+
+@media (max-width: 400px) {
+  .daily-forecast__grid { grid-template-columns: repeat(2, 1fr); }
+  .today-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
 
 
 

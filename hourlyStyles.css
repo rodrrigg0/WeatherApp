@@ -1,0 +1,97 @@
+.weather-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.weather-right {
+  position: sticky;
+  top: 1rem;
+}
+
+.hourly-panel {
+  background: var(--n800);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.hourly-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem .75rem;
+}
+
+.hourly-panel__title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.day-selector-btn {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .75rem;
+  background: var(--n700);
+  color: var(--n0);
+  border-radius: 8px;
+  font-size: .82rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.day-selector-btn:hover {
+  background: var(--n600);
+}
+
+.day-selector-btn img {
+  width: 14px;
+}
+
+.hourly-list {
+  padding: 0 .75rem .75rem;
+  max-height: 520px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--n700) transparent;
+}
+
+.hourly-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .65rem .75rem;
+  background: var(--n700);
+  border-radius: 12px;
+  margin-bottom: .4rem;
+}
+
+.hourly-item:last-child {
+  margin-bottom: 0;
+}
+
+.hourly-item__left {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.hourly-item__icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.hourly-item__time {
+  font-size: .85rem;
+  font-weight: 500;
+}
+
+.hourly-item__temp {
+  font-size: .85rem;
+  font-weight: 600;
+}

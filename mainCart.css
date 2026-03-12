@@ -1,0 +1,50 @@
+.today-card {
+display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  border-radius: 24px;
+  min-height: 180px;
+  margin-top: .75rem;
+  background: linear-gradient(135deg, hsl(233,67%,45%) 0%, hsl(248,70%,36%) 60%, hsl(263,67%,30%) 100%);
+}
+
+.today-card__info {
+  position: relative;
+  z-index: 1;
+}
+
+.today-card__city {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: .3rem;
+}
+
+.today-card__date {
+  font-size: .85rem;
+  color: rgba(255,255,255,.75);
+}
+
+.today-card__weather {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.today-card__icon {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+}
+
+
+.today-card__temp {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-style: italic;
+}

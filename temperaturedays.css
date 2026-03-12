@@ -1,0 +1,55 @@
+.daily-forecast {
+  margin-top: 1.5rem;
+}
+
+.daily-forecast__title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: .75rem;
+}
+
+.daily-forecast__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .5rem;
+}
+
+.daily-card {
+  background: var(--n800);
+  border-radius: 12px;
+  padding: .75rem .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.daily-card:hover {
+  background: var(--n700);
+}
+
+.daily-card__day {
+  font-size: .78rem;
+  color: var(--n300);
+  font-weight: 500;
+}
+
+.daily-card__icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.daily-card__temps {
+  display: flex;
+  gap: .4rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.daily-card__min {
+  color: var(--n300);
+}

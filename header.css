@@ -52,7 +52,14 @@
   min-width: 220px;
   overflow: hidden;
   z-index: 100;
-  display: none;
+  
+  
+  display: none; 
+}
+
+
+.units-menu.is-open {
+  display: block;
 }
 
 .units-menu__header {

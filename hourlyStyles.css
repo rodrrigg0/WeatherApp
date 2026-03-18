@@ -44,6 +44,16 @@
   transition: background .2s;
 }
 
+.day-selector-wrapper { position: relative; }
+
+.day-selector-menu { display: none; position: absolute; top: calc(100% + 6px); right: 0; background: var(--n700); border-radius: 12px; min-width: 130px; list-style: none; overflow: hidden; z-index: 50; }
+
+.day-selector-menu.is-open { display: block; }
+
+.day-selector-menu li { padding: .55rem 1rem; font-size: .85rem; color: var(--n0); cursor: pointer; transition: background .15s; }
+
+.day-selector-menu li:hover { background: var(--n600); }
+
 .day-selector-btn:hover {
   background: var(--n600);
 }

@@ -18,7 +18,11 @@
   max-width: 560px;
   margin: 0 auto;
 }
+.search-suggestions { position: absolute; top: calc(100% + 4px); left: 0; width: 100%; background: var(--n800); border-radius: 12px; overflow: hidden; z-index: 100; }
 
+.suggestion-item { padding: .75rem 1.2rem; font-size: .9rem; color: var(--n0); cursor: pointer; transition: background .15s; width: 100%; display: block; text-align: left; border: none; background: none; font-family: var(--font); }
+
+.suggestion-item:hover { background: var(--n700); }
 .search-bar {
   flex: 1;
   display: flex;

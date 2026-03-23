@@ -38,8 +38,19 @@ const searchInput = document.getElementById('searchInput');
 searchBtn.addEventListener('click', async () => {
   const query = searchInput.value.trim();
   if (!query) return;
+
   const results = await searchCity(query);
-  showSuggestions(results);
+
+  if (results.length === 0) {
+  document.getElementById('weatherContent').hidden = true;
+  document.getElementById('searchDropdown').innerHTML = '';
+  document.getElementById('errorMessage').hidden = false;
+  return;
+}
+
+document.getElementById('errorMessage').hidden = true;
+document.getElementById('weatherContent').hidden = false;
+showSuggestions(results);
 });
 
 async function searchCity(query) {
@@ -133,12 +144,24 @@ document.querySelectorAll('#daysMenu li').forEach((li) => {
 document.querySelectorAll('.units-menu__option').forEach((btn) => {
   btn.addEventListener('click', () => {
     const text = btn.textContent.trim();
+
+    // Cambia la unidad según el botón pulsado
     if (text.includes('Celsius')) currentUnits.temp = 'celsius';
     if (text.includes('Fahrenheit')) currentUnits.temp = 'fahrenheit';
     if (text.includes('km/h')) currentUnits.wind = 'kmh';
     if (text.includes('mph')) currentUnits.wind = 'mph';
     if (text.includes('mm')) currentUnits.precip = 'mm';
     if (text.includes('in')) currentUnits.precip = 'in';
+
+    // Quita active de todos los botones del mismo grupo
+    const section = btn.closest('.units-menu__section');
+    section.querySelectorAll('.units-menu__option').forEach((b) => {
+      b.classList.remove('active');
+    });
+
+    // Marca solo el pulsado
+    btn.classList.add('active');
+
     if (weatherData) renderWeather(weatherData, weatherLocation);
   });
 });

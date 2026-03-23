@@ -46,6 +46,12 @@ body {
 
 
 
-
+#errorMessage {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  color: var(--n0);
+}
 
 

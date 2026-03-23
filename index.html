@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather app</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="temperaturedays.css">
-<link rel="stylesheet" href="metricastyles.css">
-<link rel="stylesheet" href="mainCart.css">
-<link rel="stylesheet" href="searchStyles.css">
-<link rel="stylesheet" href="header.css">
-<link rel="stylesheet" href="hourlyStyles.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/mainCart.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/hourlyStyles.css">
+<link rel="stylesheet" href="css/metricastyles.css">
+<link rel="stylesheet" href="css/searchStyles.css">
+<link rel="stylesheet" href="css/temperaturedays.css">
 </head>
 <body>
 
@@ -53,17 +53,21 @@
     <section class="hero">
       <h1 class="hero__title">How's the sky looking today?</h1>
       <div class="search-wrapper">
-        <div class="search-bar">
-          <img src="assets/images/icon-search.svg" alt="" class="search-bar__icon">
-          <input type="text" id="searchInput" class="search-bar__input" placeholder="Search for a city, e.g., New York" autocomplete="off">
+        <div id="errorMessage" hidden>
+          <p>No search result found!</p>
         </div>
-        <button class="search-btn" id="searchBtn">Search</button>
-      </div>
-      <div class="search-suggestions" id="searchDropdown"></div>
+  <div class="search-bar">
+    <img src="assets/images/icon-search.svg" alt="" class="search-bar__icon">
+    <input type="text" id="searchInput" class="search-bar__input" placeholder="Search for a city, e.g., New York" autocomplete="off">
+  </div>
+  <button class="search-btn" id="searchBtn">Search</button>
+  <div class="search-suggestions" id="searchDropdown"></div>
+</div>
+      
     </section>
 
     <!-- CLIMA CIUDAD -->
-    <section class="weather-content" id="weatherContent">
+    <section class="weather-content" id="weatherContent" hidden>
 
       <div class="weather-left">
 

@@ -10,6 +10,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+[hidden] { display: none !important; }
 
 body {
   font-family: var(--font);
@@ -35,23 +36,29 @@ body {
   .weather-left { order: 1; width: 100%; }
   .weather-right { order: 2; width: 100%; }
   .metrics-grid { grid-template-columns: 1fr 1fr; }
-  .daily-forecast__grid { grid-template-columns: repeat(3, 1fr); }
   .hourly-list { max-height: none; }
 }
 
 @media (max-width: 400px) {
-  .daily-forecast__grid { grid-template-columns: repeat(2, 1fr); }
   .today-card { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
 
 
 
 #errorMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5rem 1rem;
   text-align: center;
-  font-size: 1rem;
+}
+
+.error__text {
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-top: 3rem;
-  color: var(--n0);
+  color: var(--n300);
 }
 
 

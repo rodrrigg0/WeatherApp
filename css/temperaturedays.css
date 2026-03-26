@@ -35,6 +35,8 @@
   font-size: .78rem;
   color: var(--n300);
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .04em;
 }
 
 .daily-card__icon {
@@ -52,4 +54,34 @@
 
 .daily-card__min {
   color: var(--n300);
+}
+
+/* ── Mobile: grid 3 columnas ── */
+@media (max-width: 768px) {
+  .daily-forecast__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: .6rem;
+  }
+
+  .daily-card {
+    padding: 1rem .5rem;
+    border-radius: 14px;
+    gap: .6rem;
+  }
+
+  .daily-card__day {
+    font-size: .8rem;
+  }
+
+  .daily-card__icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .daily-card__temps {
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem;
+    font-size: .85rem;
+  }
 }
